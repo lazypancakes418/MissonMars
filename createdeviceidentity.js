@@ -2,7 +2,7 @@
 
 var iothub = require('azure-iothub');
 
-var connectioString ='HostName=coffeepot-mars.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=tWEcUQ5OgYTCwIw09YrlTu9IXPY3l76BlthLkEGrL8U=';
+var connectionString ='HostName=coffeepot-mars.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=tWEcUQ5OgYTCwIw09YrlTu9IXPY3l76BlthLkEGrL8U=';
 var registry = iothub.Registry.fromConnectionString(connectioString);
 
 var device = new iothub.Device(null);

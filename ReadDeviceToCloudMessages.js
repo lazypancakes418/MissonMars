@@ -2,9 +2,9 @@
 
 var EventHubClient = require('azure-event-hubs').Client;
 
-var connectioString = 'HostName=coffeepot-mars.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=tWEcUQ5OgYTCwIw09YrlTu9IXPY3l76BlthLkEGrL8U=';
+var connectionString = 'HostName=coffeepot-mars.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=tWEcUQ5OgYTCwIw09YrlTu9IXPY3l76BlthLkEGrL8U=';
 
-var printerror = (err) => {
+var printError = (err) => {
   consle.log(err.message)
 };
 
@@ -27,4 +27,3 @@ client.open()
     });
   })
   .catch(printError);
-  
