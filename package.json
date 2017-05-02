@@ -9,6 +9,7 @@
   "author": "RJ Mohammad",
   "license": "MIT",
   "dependencies": {
+    "azure-event-hubs": "0.0.7",
     "azure-iothub": "^1.1.9"
   }
 }
