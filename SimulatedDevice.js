@@ -19,7 +19,10 @@ var connectCallback = function (err) {
      console.log('Could not connect: ' + err);
    } else {
      console.log('Client connected');
-
+     client.on('message', function (msg) {
+       console.log('Id: ' + msg.messageId + ' Body: ' + msg.data);
+       client.complete(msg, printResultFor('completed'));
+     });
      // Create a message and send it to the IoT Hub every second
      setInterval(function(){
          var temperature = 20 + (Math.random() * 15);
@@ -32,5 +35,5 @@ var connectCallback = function (err) {
      }, 1000);
    }
  };
-
+ 
  client.open(connectCallback);
